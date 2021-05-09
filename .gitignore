@@ -1,0 +1,7 @@
+# build and test
+/test
+/test.c
+
+# vim
+*.swp
+
