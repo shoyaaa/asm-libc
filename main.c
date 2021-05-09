@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 int _strlen(char*);
+void _puts(char*);
 
 int main() {
-  printf("%d\n", _strlen("hello"));
+  _puts("hello world\n");
 
   return 0;
 }
