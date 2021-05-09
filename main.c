@@ -1,11 +1,17 @@
-#include <stdio.h>
-
 int _strlen(char*);
 void _puts(char*);
+void _exit(int);
 
 int main() {
-  _puts("hello world\n");
+  char mytext[] = "shoyaaa";
+  char size[] = { _strlen(mytext)+48, 0 };
 
-  return 0;
+  _puts("length of '");
+  _puts(mytext);
+  _puts("' is: ");
+  _puts(size);
+  _puts("\n");
+
+  _exit(0);
 }
 
