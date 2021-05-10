@@ -1,14 +1,10 @@
-int _strlen(char*);
 void _puts(char*);
 void _exit(int);
+int _mul(int, int);
 
 int main() {
-  char mytext[] = "shoyaaa";
-  char size[] = { _strlen(mytext)+48, 0 };
+  char size[] = { _mul(2, 3)+48, 0 };
 
-  _puts("length of '");
-  _puts(mytext);
-  _puts("' is: ");
   _puts(size);
   _puts("\n");
 
