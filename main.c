@@ -1,12 +1,12 @@
 void _puts(char*);
 void _exit(int);
 int _abs(int);
-int _pow(int, int);
+int _upow(int, int);
 
 int main() {
-  char pow_s[] = { _pow(_abs(-3), 2)+'0', 0};
+  char upow_s[] = { _upow(_abs(-123123), 0)+'0', 0};
 
-  _puts(pow_s);
+  _puts(upow_s);
   _puts("\n");
 
   _exit(0);

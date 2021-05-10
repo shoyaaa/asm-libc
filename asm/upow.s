@@ -1,8 +1,11 @@
-.global _pow
+.global _upow
 
 .text
-  # int _pow(int, int)
-  _pow:
+  # int _upow(int, int)
+  _upow:
+    cmp $0, %rsi
+    je .return_one
+
     .loop_start:
       xor %rcx, %rcx # counter
       mov $1, %rbx # base
@@ -30,5 +33,9 @@
 
     .loop_end:
       mov %rbx, %rax
+      ret
+
+    .return_one:
+      mov $1, %rax
       ret
 
