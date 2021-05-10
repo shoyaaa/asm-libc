@@ -1,11 +1,14 @@
 void _puts(char*);
 void _exit(int);
-int _mul(int, int);
+int _abs(int);
 
 int main() {
-  char size[] = { _mul(2, 3)+48, 0 };
+  char first_abs[] = { _abs(-8)+'0', 0};
+  char second_abs[] = { _abs(5)+'0', 0 };
 
-  _puts(size);
+  _puts(first_abs);
+  _puts(" - ");
+  _puts(second_abs);
   _puts("\n");
 
   _exit(0);
