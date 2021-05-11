@@ -1,13 +1,12 @@
 void _puts(char*);
 void _exit(int);
-int _abs(int);
-int _upow(int, int);
+int _atoi(char*);
 
 int main() {
-  char upow_s[] = { _upow(_abs(-123123), 0)+'0', 0};
+  char num[] = { 0, 10, 0 };
+  num[0] = _atoi("3") + _atoi("6") + '0';
 
-  _puts(upow_s);
-  _puts("\n");
+  _puts(num);
 
   _exit(0);
 }
