@@ -1,12 +1,15 @@
 void _puts(char*);
 void _exit(int);
-int _atoi(char*);
+void _gets(int, char*);
 
 int main() {
-  char num[] = { 0, 10, 0 };
-  num[0] = _atoi("3") + _atoi("6") + '0';
+  char buffer[25];
 
-  _puts(num);
+  _puts("Write your name: ");
+  _gets(25, buffer);
+  _puts("Hello, ");
+  _puts(buffer);
+  _puts("!\n");
 
   _exit(0);
 }
