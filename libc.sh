@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 function build {
+  mkdir -p build/
   FILES=asm/*.asm
   for file in $FILES; do
     echo "Assembling $(basename -s .asm $file)"

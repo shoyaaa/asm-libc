@@ -1,6 +1,6 @@
 global _upow
-
-extern _mul
+global _mul
+global _abs
 
 section .text
   ; int _upow(int, int)
@@ -39,5 +39,27 @@ section .text
 
     .return_one:
       mov rax, 1
+      ret
+
+  ; int _mul(int, int)
+  _mul:
+    mov rax, rdi ; move first parameter to rax
+    xor rdx, rdx ; clear
+    mul rsi ; rax *= rsi
+
+    ret
+
+  ; int _abs(int)
+  _abs:
+    ; check first parameter is zero or greater
+    cmp edi, 0
+    jge .return_default
+
+    mov rsi, -1
+    call _mul ; _mul(rdi, -1)
+    ret
+
+    .return_default:
+      mov rax, rdi
       ret
 
