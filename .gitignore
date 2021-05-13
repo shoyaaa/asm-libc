@@ -1,6 +1,7 @@
 # build and test
 /test
 /test.c
+/build
 
 # vim
 *.swp
