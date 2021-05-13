@@ -4,20 +4,21 @@ section .text
   ; int _atoi(char*)
   _atoi:
     xor rax, rax ; clear return value
+    xor rcx, rcx
 
     .loop_start:
       .loop:
-        mov rsi, [rdi] ; move current char to rsi
+        movzx rsi, byte [rdi+rcx] ; move current char to rsi
         cmp rsi, 0 ; check end of string
         je .loop_end
 
         ; ascii -> decimal
-        sub rsi, '0'
+        sub rsi, 48
         imul rax, 10
         add rax, rsi
 
         ; move next character
-        inc rdi
+        inc rcx
 
         ; loop back
         jmp .loop
