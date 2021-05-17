@@ -7,7 +7,7 @@ section .text
   ; note that string must be zero-terminated
   _strlen:
     .loop_start:
-      mov rax, 0 ; initialize counter
+      xor rax, rax ; initialize counter
 
       .loop:
         ; move current character to bl register
@@ -27,7 +27,7 @@ section .text
 
   ; void* _memset(void*, char, int)
   _memset:
-    mov rcx, 0
+    xor rcx, rcx
     .loop:
       cmp rcx, rdx
       je .loop_exit

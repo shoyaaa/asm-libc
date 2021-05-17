@@ -31,4 +31,3 @@ section .text
     xor rax, rax ; clear return value
     ret
 
-
